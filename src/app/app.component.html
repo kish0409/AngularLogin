@@ -1,0 +1,35 @@
+<div>
+
+<h1 class="title">To do List </h1>
+
+</div>
+
+<div class="container">
+Add a to do...
+<br>
+<input type="text"
+class="inputtext"
+placeholder="type a to do"
+[(ngModel)]="todoVal"
+(keyup.enter)="addItem()"
+
+
+
+>
+
+<button class="addbtn" (click)="addItem">Add a to do</button>
+<div class="list">
+  <ul>
+    <li  >
+      <input type="checkbox" name="Is done"
+      [(ngModel)]="item.isDone"
+      
+      >
+      {{item.val}}
+      Task1
+      <button class="btn" (click)="deleteItem()" >Delete</button>
+     </li>
+  </ul>
+</div>
+
+</div>
